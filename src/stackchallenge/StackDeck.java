@@ -4,11 +4,15 @@ public class StackDeck {
     int[] stack;
     int[] discarded;
     int topStack;
+    int topDiscarded;
+    int firstElement;
     
     public StackDeck() {
         topStack = -1;
-        stack = new int[5];
-        discarded = new int[5];
+        topDiscarded = 0;
+        stack = new int[15];
+        discarded = new int[15];
+        firstElement = 0;
     }
     
     public boolean isEmpty() {
@@ -45,14 +49,14 @@ public class StackDeck {
         return valueRemoved;
     }
     
-    /*
     public void moveDeck() {
-        while (cartas > 2) {
-            discarded[] = this.pop();
-            stack[topStack] = 
+        while (topStack >= 1) {
+            discarded[topDiscarded] = this.pop();
+            topDiscarded++;           
+            //criar algoritmmo que deixe o ultimo elemento da pilha vazio e reposicione os demais
         }
-    }
-    */
+    }    
+        
     public String popAll() {
         while (!isEmpty()) {
             int valueRemoved = stack[topStack--];
