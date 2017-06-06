@@ -52,8 +52,11 @@ public class StackDeck {
     public void moveDeck() {
         while (topStack >= 1) {
             discarded[topDiscarded] = this.pop();
-            topDiscarded++;           
-            //criar algoritmmo que deixe o ultimo elemento da pilha vazio e reposicione os demais
+            topDiscarded++;
+            //criar algoritmmo que deixe o ultimo elemento da pilha vazio e reposicione os demais para o topo
+            for (int i = 0; i < stack.length; i ++) {
+                
+            }
         }
     }    
         
