@@ -10,8 +10,8 @@ public class StackDeck {
     public StackDeck() {
         topStack = -1;
         topDiscarded = 0;
-        stack = new int[15];
-        discarded = new int[15];
+        stack = new int[10];
+        discarded = new int[10];
         firstElement = 0;
     }
     
@@ -49,16 +49,34 @@ public class StackDeck {
         return valueRemoved;
     }
     
+    public void printStack() {
+        for (int i = 0; i <= topStack; i++) {
+            System.out.println(stack[i] + " ");
+        }
+    }
+    
+    public void printDiscarded() {
+        for (int i = 0; i < topDiscarded; i++) {
+            System.out.print(discarded[i] + " ");
+        }
+    }
+    
+    //revisar e testar este metodo
     public void moveDeck() {
+        System.out.println("here1");
         while (topStack >= 1) {
+            //System.out.println("here");
             discarded[topDiscarded] = this.pop();
             topDiscarded++;
-            //criar algoritmmo que deixe o ultimo elemento da pilha vazio e reposicione os demais para o topo
-            for (int i = 0; i < stack.length; i ++) {
-                
-            }
+            
+            //int temp = stack[topStack];
+            //for (int i = topStack; i > 0; i--) {
+             //   System.out.println("here2");
+              //  stack[i] = stack[i-1];
+            //}
+            System.out.println("A" + topStack);
         }
-    }    
+    }
         
     public String popAll() {
         while (!isEmpty()) {
