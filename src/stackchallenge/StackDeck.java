@@ -52,11 +52,10 @@ public class StackDeck {
     public void printStack() {
         System.out.println(" ");
         for (int i = 0; i <= topStack; i++) {
-            System.out.println("Last card: " + stack[i] + " ");
+            System.out.println("Remaining card: " + stack[i] + " ");
         }
     }
     
-    //funcionando
     public void printDiscarded() {
         System.out.print("Dicarded: ");
         for (int i = 0; i < topDiscarded; i++) {
@@ -64,7 +63,6 @@ public class StackDeck {
         }
     }
     
-    //revisar e testar este metodo
     public void moveDeck() {
         System.out.println(" ");
         while (topStack >= 1) {
