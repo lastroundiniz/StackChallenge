@@ -50,12 +50,15 @@ public class StackDeck {
     }
     
     public void printStack() {
+        System.out.println(" ");
         for (int i = 0; i <= topStack; i++) {
-            System.out.println(stack[i] + " ");
+            System.out.println("Last card: " + stack[i] + " ");
         }
     }
     
+    //funcionando
     public void printDiscarded() {
+        System.out.print("Dicarded: ");
         for (int i = 0; i < topDiscarded; i++) {
             System.out.print(discarded[i] + " ");
         }
@@ -63,18 +66,15 @@ public class StackDeck {
     
     //revisar e testar este metodo
     public void moveDeck() {
-        System.out.println("here1");
+        System.out.println(" ");
         while (topStack >= 1) {
-            //System.out.println("here");
             discarded[topDiscarded] = this.pop();
             topDiscarded++;
-            
-            //int temp = stack[topStack];
-            //for (int i = topStack; i > 0; i--) {
-             //   System.out.println("here2");
-              //  stack[i] = stack[i-1];
-            //}
-            System.out.println("A" + topStack);
+            int temp_top = stack[topStack];
+            for (int i = topStack; i >= 1; i--) {
+                stack[i] = stack[i-1];
+            }
+            stack[0] = temp_top;
         }
     }
         
