@@ -1,4 +1,4 @@
-# stackChallenge
+# stack challenge
 
 EXERCÍCIO DESAFIO 1 (PILHAS)
 
